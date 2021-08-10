@@ -1,0 +1,617 @@
+body {
+    margin: 0;
+    min-width: 250px;
+    background-color:#888;
+    font-family: 'Roboto Slab', serif;
+  }
+  /* header navigation bar */
+  .navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    
+  }
+  .navbar a.right {
+    float: right;
+    color: yellow;
+    font-size: x-large;
+    padding:8px;
+    margin-right: 8px;
+  }
+  .navbar a.right:hover {
+    background-color: #555;
+  }
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: black;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+  /* signup */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .signupcontainer {
+    padding: 16px;
+    margin: 10%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .signupclose {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    margin: 5% auto;
+  }
+  
+  .signupclose:hover,
+  .signupclose:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+  /* signup closed */
+
+  /* login page */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .containerlogin {
+    padding: 30px;
+    margin: 10%;
+  }
+  
+  span.psw2 {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modallogin {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modallogin-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .closelogin {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .closelogin:hover,
+  .closelogin:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw2 {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+  }
+  /* login closed */
+
+
+  /* search container start */
+  .navbar .search-container {
+  float: right;
+  margin-right: 16px;
+  width:20%;
+}
+
+.navbar input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .search-container {
+    float: none;
+  }
+  .navbar a, .navbar input[type=text], .navbar .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .navbar input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+/* search container end */
+
+/* form picture */
+.bg-img {
+    /* The image used */
+    background-image: url("data:image/jpeg;base64,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");
+    
+    min-height: 560px;
+    margin-top: 17px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-right: 200px;
+    padding-top: 120px;
+  }
+  
+  /* Add styles to the form container */
+
+  .picture-form-container{
+    float: right;
+    
+    right: 0;
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 50px;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: blue solid 1px;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+
+  /* picture-form closed */
+
+  /* flipcard strt */
+
+  .column-flipcards {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    margin: 8px;
+    margin-top: 55px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row-flipcards {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row-flipcards:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column-flipcards {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: orange;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* lower down searches */
+  .column-lower-option {
+    float: left;
+    width: 23%;
+    padding: 10px;
+    background-color: #befcd6;
+    text-align: left;
+    min-height: 520px;
+    
+  }
+  ul{
+    list-style-type: none;
+    
+  }
+  ul a{
+      text-decoration: none;
+      color:black;
+  }
+  ul a:hover{
+      color:blue;
+  }
+  .row-lower-option{
+      margin-left: 8px;
+      margin-bottom: 16px;
+  }
+  /* Clear floats after the columns */
+  .row-lower-option:after {
+    content: "";
+    
+    clear: both;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column-lower-option  {
+      width: 25%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column-lower-option  {
+      width: 100%;
+    }
+  }
+
+
+   /* contact form */
+   input[type=text], select, textarea {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width:40%;
+    margin-top: 12px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .contact-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10%;
+    margin-top: 14%;
+      margin-left: 14vh;
+      margin-right: 14vh;
+  }
+
+  /* chatbot -------------------------------*/
+  /* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: teal;
+  font-size: 24px;
+  color: white;
+  padding: 4px 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 15px;
+  right: 18px;
+  width: 40px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #837e7e;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  margin-left: 4vh;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+  /* footer --------------------------------------------*/
+  .footer{
+   background-color:black;
+    color: white;
+    padding: 10px;
+    text-align: center; 
+    margin-top: 15vh;
+    height: 20vh;
+}
+
+.followheading{
+  font-size: 40px;
+  font-family: 'Akaya Kanadaka', cursive;
+  color: white;
+  padding: 30;
+  position:fixed;
+}
+.centerdiv{
+    margin-top: 5vh;
+  height:10px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.centerdiv a{
+  height:50px;
+  width:50px;
+  background-color:#ecf0f1;
+  border-radius: 50px;
+  text-align: center;
+  margin:10px;
+  line-height: 51px;
+  box-shadow:1px 4px 2px 2px #7f8c8d;
+}
+.centerdiv a i{
+  transition: all 0.3s linear;
+}
+.centerdiv a:hover i{
+   transform: scale(2);
+}
+.fa-github{
+  color: black;
+}
+.fa-linkedin{
+  color:blue;
+}
+.fa-quora{
+  color: red;
+}
